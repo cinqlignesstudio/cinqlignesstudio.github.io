@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Cible -->
+  <circle cx="58" cy="70" r="52" fill="#e24b4b" stroke="#2b2340" stroke-width="4"/>
+  <circle cx="58" cy="70" r="39" fill="#fffaf0"/>
+  <circle cx="58" cy="70" r="26" fill="#e24b4b"/>
+  <circle cx="58" cy="70" r="13" fill="#fffaf0"/>
+  <circle cx="58" cy="70" r="5" fill="#e24b4b"/>
+  <path d="M16 54 C20 40 30 30 42 25" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round"/>
+  <!-- Flèche plantée au centre -->
+  <line x1="58" y1="70" x2="108" y2="20" stroke="#2b2340" stroke-width="8" stroke-linecap="round"/>
+  <line x1="58" y1="70" x2="108" y2="20" stroke="#f5c935" stroke-width="3.5" stroke-linecap="round"/>
+  <g stroke="#2b2340" stroke-width="3" stroke-linejoin="round">
+    <path d="M100 28 L102 10 L112 2 L110 18 Z" fill="#7b5ce0"/>
+    <path d="M100 28 L118 26 L126 16 L110 18 Z" fill="#1fa9a6"/>
+  </g>
+</svg>

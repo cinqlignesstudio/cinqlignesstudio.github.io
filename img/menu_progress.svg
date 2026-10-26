@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffe680"/>
+      <stop offset="0.5" stop-color="#f5c535"/>
+      <stop offset="1" stop-color="#c48a10"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#2b2340" stroke-width="4" stroke-linejoin="round">
+    <!-- Anses -->
+    <path d="M30 22 H12 C12 48 22 58 38 60" fill="none" stroke-width="10"/>
+    <path d="M30 22 H12 C12 48 22 58 38 60" fill="none" stroke="#f5c535" stroke-width="4"/>
+    <path d="M98 22 H116 C116 48 106 58 90 60" fill="none" stroke-width="10"/>
+    <path d="M98 22 H116 C116 48 106 58 90 60" fill="none" stroke="#f5c535" stroke-width="4"/>
+    <!-- Coupe -->
+    <path d="M26 10 H102 V34 C102 62 86 76 64 78 C42 76 26 62 26 34 Z" fill="url(#gold)"/>
+    <path d="M56 76 H72 L76 96 H52 Z" fill="#e0a51e"/>
+    <!-- Socle -->
+    <rect x="34" y="96" width="60" height="12" rx="3" fill="#7a3f1c"/>
+    <rect x="26" y="108" width="76" height="14" rx="4" fill="#5e2f14"/>
+  </g>
+  <!-- Étoile -->
+  <path d="M64 22 L70.5 35 L85 37 L74.5 47 L77 61.5 L64 54.5 L51 61.5 L53.5 47 L43 37 L57.5 35 Z" fill="#fff7d0" stroke="#c48a10" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M34 18 V38" stroke="#ffffff" stroke-opacity="0.7" stroke-width="4" stroke-linecap="round"/>
+  <rect x="50" y="112" width="28" height="6" rx="2" fill="#f5c535"/>
+</svg>

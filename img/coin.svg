@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="face" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffeb8a"/>
+      <stop offset="1" stop-color="#f0b323"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbd352"/>
+      <stop offset="1" stop-color="#c48a10"/>
+    </linearGradient>
+  </defs>
+  <!-- Tranche, puis la pièce -->
+  <circle cx="64" cy="68" r="57" fill="#a8740c" stroke="#2b2340" stroke-width="5"/>
+  <circle cx="64" cy="62" r="57" fill="url(#rim)" stroke="#2b2340" stroke-width="5"/>
+  <circle cx="64" cy="62" r="44" fill="url(#face)" stroke="#c48a10" stroke-width="4"/>
+  <!-- Croche en relief -->
+  <g fill="#8a5a06">
+    <ellipse cx="55" cy="82" rx="14" ry="10.5" transform="rotate(-22 55 82)"/>
+    <rect x="63" y="32" width="7" height="50" rx="2"/>
+    <path d="M66 32 C71 41 86 44 86 58 C86 64 84 68 81 71 C83 62 77 55 68 53 Z"/>
+  </g>
+  <!-- Reflets -->
+  <path d="M26 48 C30 34 42 22 58 18" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M34 62 C34 52 40 42 48 37" fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

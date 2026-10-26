@@ -1,0 +1,237 @@
+/* Site de Do Ré Mi Dis : couleurs et polices de l'appli, sans aucune ressource extérieure. */
+
+@font-face {
+  font-family: "Baloo 2";
+  src: url("fonts/Baloo2.ttf") format("truetype");
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("fonts/Figtree.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+:root {
+  --paper: #f3f1f8;
+  --card: #ffffff;
+  --ink: #26223f;
+  --muted: #5f5a7a;
+  --line: #e2dff0;
+  --accent: #6b4fd8;
+  --accent-ink: #ffffff;
+  --cta: #f2c230;
+  --cta-ink: #26223f;
+  --hero-from: #8f78f2;
+  --hero-to: #4a31b5;
+  --shadow: 0 6px 0 rgba(38, 34, 63, 0.9);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1b1830;
+    --card: #2a2546;
+    --ink: #f1eefc;
+    --muted: #b6b0d6;
+    --line: #3b355e;
+    --accent: #9a86f5;
+    --accent-ink: #1b1830;
+    --shadow: 0 6px 0 rgba(6, 4, 16, 0.9);
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Baloo 2", "Figtree", system-ui, sans-serif;
+  line-height: 1.15;
+  margin: 0 0 0.4em;
+}
+
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); font-weight: 800; }
+h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; margin-top: 1.6em; }
+h3 { font-size: 1.25rem; font-weight: 700; }
+
+a { color: var(--accent); }
+a:hover { text-decoration-thickness: 2px; }
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* En-tête commun */
+.site-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
+  font-size: 1.35rem;
+}
+
+.brand img { width: 40px; height: 40px; border-radius: 10px; }
+
+.site-header nav { display: flex; gap: 6px 16px; flex-wrap: wrap; font-weight: 600; }
+.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header nav a:hover, .site-header nav a[aria-current="page"] { color: var(--ink); }
+
+/* Accueil */
+.hero {
+  background: linear-gradient(135deg, var(--hero-from), var(--hero-to));
+  color: #ffffff;
+  padding: 48px 0 56px;
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero p { font-size: 1.2rem; max-width: 36em; margin: 0 0 1.4em; }
+
+.hero-icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 44px;
+  box-shadow: 0 10px 0 rgba(20, 12, 60, 0.45);
+}
+
+.button {
+  display: inline-block;
+  background: var(--cta);
+  color: var(--cta-ink);
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 12px 26px;
+  border: 3px solid #26223f;
+  border-radius: 18px;
+  box-shadow: 0 5px 0 #26223f;
+}
+
+.button:hover { transform: translateY(2px); box-shadow: 0 3px 0 #26223f; }
+
+.hero small { display: block; margin-top: 12px; opacity: 0.85; }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin: 24px 0 8px;
+}
+
+.card {
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.feature img { width: 64px; height: 64px; }
+.feature p { margin: 0; color: var(--muted); }
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.shots figure { margin: 0; }
+
+.shots img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 3px solid #26223f;
+  box-shadow: var(--shadow);
+}
+
+.shots figcaption { color: var(--muted); font-size: 0.95rem; margin-top: 10px; }
+
+.promise {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.promise img { width: 88px; height: 88px; }
+.promise ul { margin: 0; padding-left: 1.2em; }
+
+/* Pages de texte (confidentialité, mentions légales) */
+.page { max-width: 760px; padding-top: 32px; padding-bottom: 48px; }
+.page h2 { font-size: 1.6rem; }
+.page .updated { color: var(--muted); margin-top: -0.4em; }
+
+.summary {
+  background: var(--card);
+  border: 2px solid var(--line);
+  border-left: 6px solid var(--accent);
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+
+.summary ul { margin: 0; padding-left: 1.2em; }
+
+dl.identity { display: grid; grid-template-columns: max-content 1fr; gap: 6px 18px; margin: 0; }
+dl.identity dt { font-weight: 700; }
+dl.identity dd { margin: 0; }
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 48px;
+  padding: 24px 0 36px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-footer .wrap { display: flex; gap: 8px 24px; flex-wrap: wrap; justify-content: space-between; }
+.site-footer nav { display: flex; gap: 6px 18px; flex-wrap: wrap; }
+
+@media (max-width: 720px) {
+  .hero { padding: 32px 0 40px; }
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero-icon { width: 120px; height: 120px; border-radius: 28px; order: -1; }
+  .promise { grid-template-columns: 1fr; }
+  dl.identity { grid-template-columns: 1fr; }
+  dl.identity dd { margin-bottom: 8px; }
+}
